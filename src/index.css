@@ -5,13 +5,13 @@ body {
     align-items: center;
     /* font-family: 'Alegreya', serif; */
     font-family: 'Montserrat', sans-serif;
-    background: #d1e8e2;
+    background: white;
 }
 
 header, footer {
     margin: 20px;
     font-size: 15px;
-    background: #d1e8e2;
+    background: white;
 }
 
 header {
@@ -63,6 +63,10 @@ textarea {
     font-size: 15px;
 }
 
+textarea:focus {
+    border: 2px solid black;
+}
+
 ul {
     display: flex;
     flex-direction: column;
@@ -90,8 +94,7 @@ ul {
 }
 
 .wpm-container {
-    /* border: 1px solid blue; */
-    width: 200px;
+    width: 225px;
     height: 25px;
     display: flex;
     justify-content: center;
@@ -100,9 +103,8 @@ ul {
 }
 
 .quote-container {
-    /* border: 1px solid blue; */
     width: 500px;
-    height: 150px;
+    height: 125px;
     margin: 5px;
     display: flex;
     align-items: center;
