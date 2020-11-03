@@ -61,6 +61,7 @@ textarea {
     padding: 5px 15px 5px 15px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    margin-top: 15px;
 }
 
 textarea:focus {
@@ -75,6 +76,11 @@ ul {
     line-height: 1.25;
     font-size: 15px;
     margin: 0px 10px 0 10px;
+}
+
+canvas {
+    border: 1px solid blue;
+    padding: 5px 15px 5px 15px;
 }
 
 .difficulty-container, .instructions-container {
@@ -99,7 +105,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 10px;
 }
 
 .quote-container {

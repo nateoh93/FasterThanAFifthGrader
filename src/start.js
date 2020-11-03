@@ -1,3 +1,5 @@
+import UserTyping from './type';
+
 const randomWords = require('random-words');
 const startGame = document.getElementById('start-game');
 const userTyping = document.getElementById('user-input');
@@ -20,6 +22,7 @@ function LoadGame() {
     });
 
     userTyping.focus();
+    userTyping.addEventListener('input', UserTyping);
     startGame.removeEventListener('click', LoadGame);
     return;
 };

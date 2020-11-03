@@ -3,11 +3,12 @@ const wpmResults = document.getElementById('wpm-results');
 const startGame = document.getElementById('start-game');
 import LoadGame from './start';
 
+
 let startTime = null;
 let endTime = null;
 
 function UserTyping() {
-    startGame.removeEventListener('click', LoadGame);
+    // startGame.removeEventListener('click', LoadGame);
 
     let userInputs = userTyping.value.split('');
     let quote = document.querySelectorAll('span');
@@ -16,6 +17,9 @@ function UserTyping() {
         startTime = new Date();
     }
 
+    console.log(startTime)
+    
+    
     let totalWrong = quote.length;
 
     quote.forEach( (char, idx) => {
@@ -41,8 +45,8 @@ function UserTyping() {
         const numWords = quote.length / 5;
         const wpm = Math.floor(numWords / minutes);
         wpmResults.innerHTML = wpm + ' words per minute';
-
-        startGame.classList.remove('hidden');
+        console.log(endTime)
+        // startGame.classList.remove('hidden');
         userTyping.removeEventListener('input', UserTyping);
         return;
     }
