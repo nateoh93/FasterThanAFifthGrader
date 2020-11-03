@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Are You Faster Than A Fifth Grader?</title>
     <script src="bundle.js" defer></script>
+    <link rel="stylesheet" href="./src/reset.css">
     <link rel="stylesheet" href="./src/index.css">
 </head>
 <body>
@@ -16,10 +17,10 @@
     </header>
 
     <main>
-        <div id="wpm-results"></div>
-        <p id='quote'></p>
+        <div class="wpm-container"><div id="wpm-results"></div></div>
+        <div class="quote-container"><p id='quote'></p></div>
         <textarea id='user-input' placeholder="To begin, start typing..."></textarea>
-        <button id='start-game'>Start</button>
+        <div class="btn-container"><button id='start-game'>Start</button></div>
     </main>
 
     <footer>

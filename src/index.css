@@ -1,4 +1,71 @@
-.done {
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, footer {
+    margin: 20px;
+}
+
+footer {
+    display: flex;
+}
+
+main {
+    /* text-align: center; */
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 1rem; 
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    width: 500px;
+    height: 200px;
+    border-radius: 1rem;
+    padding: 5px 15px 5px 15px;
+}
+
+.wpm-container {
+    /* border: 1px solid blue; */
+    width: 200px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.quote-container {
+    /* border: 1px solid blue; */
+    width: 500px;
+    height: 75px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    background: aliceblue;
+    padding: 5px 15px 5px 15px;
+    border-radius: 1rem;
+}
+
+.btn-container {
+    width: 100px;
+    height: 25px;
+    margin: 5px;
+}
+
+.right {
     color: darkgray;
 }
 

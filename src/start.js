@@ -1,7 +1,6 @@
 const randomWords = require('random-words');
 const startGame = document.getElementById('start-game');
 const userTyping = document.getElementById('user-input');
-// const startButton = document.getElementById('user-input');
 
 function LoadGame() {
     startGame.classList.add('hidden')
@@ -18,8 +17,8 @@ function LoadGame() {
         quote.appendChild(span);
     });
 
-    startGame.removeEventListener('click', LoadGame);
     userTyping.focus();
+    startGame.removeEventListener('click', LoadGame);
 };
 
 export default LoadGame;
