@@ -1,10 +1,10 @@
 import LoadGame from './start';
+import UserTyping from './type'
 
 const userTyping = document.getElementById('user-input')
 const startGame = document.getElementById('start-game')
 
-
-
+//consider if you want a timer
 // let count = 5;
 // function countdown() { 
     //     setInterval( () => {
@@ -18,13 +18,12 @@ const startGame = document.getElementById('start-game')
 //     }, 1000)
 // };
 
-startGame.addEventListener('click', () => {
-    // countdown();
-    LoadGame();
-    userTyping.focus();
-});
+// startGame.addEventListener('click', () => {
+//     // countdown();
+//     LoadGame();
+//     startGame.removeEventListener('click')
+//     userTyping.focus();
+// });
 
-userTyping.addEventListener('input', () => {
-    // LoadGame();
-    // console.log('hi')
-})
+startGame.addEventListener('click', LoadGame);
+userTyping.addEventListener('input', UserTyping);
