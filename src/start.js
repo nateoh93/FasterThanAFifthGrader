@@ -5,11 +5,13 @@ const userTyping = document.getElementById('user-input');
 function LoadGame() {
     startGame.classList.add('hidden')
     let quote = document.getElementById('quote');
-    let wpmResults = document.getElementById('wpm-results');
     let newQuote = randomWords({ exactly: 30, join: ' '});
+
+    let wpmResults = document.getElementById('wpm-results');
 
     quote.innerHTML = '';
     wpmResults.innerHTML = '';
+    userTyping.value = '';
     
     newQuote.split('').forEach( char => {
         const span = document.createElement('span');
