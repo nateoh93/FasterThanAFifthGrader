@@ -1,9 +1,10 @@
 .done {
-    color: green;
+    color: darkgray;
 }
 
 .wrong {
     color: red;
+    background: darkred;
 }
 
 .neutral {

@@ -1,10 +1,10 @@
 const randomWords = require('random-words');
 const startGame = document.getElementById('start-game');
-const userTyping = document.getElementById('user-input')
+const userTyping = document.getElementById('user-input');
 
 function LoadGame() {
     let quote = document.getElementById('quote');
-    let newQuote = randomWords({ min: 30, max: 70, join: ' '});
+    let newQuote = randomWords({ min: 30, max: 35, join: ' '});
 
     quote.innerHTML = '';
     
@@ -15,7 +15,7 @@ function LoadGame() {
     });
 
     startGame.removeEventListener('click', LoadGame);
-    userTyping.focus()
+    userTyping.focus();
 };
 
 export default LoadGame;
