@@ -10,3 +10,7 @@
 .neutral {
     color: inherit;
 }
+
+.hidden {
+    display: none;
+}

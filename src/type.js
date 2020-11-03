@@ -1,4 +1,9 @@
 const userTyping = document.getElementById('user-input');
+const wpmResults = document.getElementById('wpm-results');
+const startGame = document.getElementById('start-game');
+
+let startTime = null;
+let endTime = null;
 
 function UserTyping() {
     let userInputs = userTyping.value.split('');
@@ -6,9 +11,7 @@ function UserTyping() {
 
     if (!startTime) {
         startTime = new Date();
-        console.log('this is the start ' + startTime)
     }
-    
 
     quote.forEach( (char, idx) => {
         if (userInputs[idx] === undefined) {
@@ -23,14 +26,20 @@ function UserTyping() {
         };
     });
 
-    let lastChar = quote.length - 1
-    if (quote[lastChar].innerHTML === userInputs[lastChar]) {
-        endTime = new Date()
-        console.log(endTime)
-    }
-};
+    let lastChar = quote.length - 1;
 
-let startTime = null;
-let endTime = null;
+    if (quote[lastChar].innerHTML === userInputs[lastChar]) {
+        endTime = new Date();
+        const minutes = (endTime - startTime) / 1000 / 60;
+        const numWords = quote.length / 5;
+        const wpm = Math.floor(numWords / minutes);
+        wpmResults.innerHTML = wpm
+
+        startGame.classList.remove('hidden')
+        document.removeEventListener('input', UserTyping);
+        return;
+    }
+    
+};
 
 export default UserTyping;
