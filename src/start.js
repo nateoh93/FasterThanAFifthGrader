@@ -19,6 +19,7 @@ function LoadGame() {
 
     userTyping.focus();
     startGame.removeEventListener('click', LoadGame);
+    return;
 };
 
 export default LoadGame;
