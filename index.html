@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="bundle.js"></script>
     <title>Are You Faster Than A Fifth Grader?</title>
+    <script src="bundle.js" defer></script>
+    <link rel="stylesheet" href="./src/index.css">
 </head>
 <body>
     <header>
@@ -15,8 +16,10 @@
     </header>
 
     <main>
-
-        <textarea></textarea>
+        <div id="countdown"></div>
+        <p class='quote'>If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.</p>
+        <textarea id='user-input' placeholder="To begin start typing..."></textarea>
+        <button id='start-game'>Start</button>
     </main>
 
     <footer>
