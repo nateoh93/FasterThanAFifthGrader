@@ -7,6 +7,8 @@
     <script src="bundle.js" defer></script>
     <link rel="stylesheet" href="./src/reset.css">
     <link rel="stylesheet" href="./src/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Montserrat&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
@@ -17,10 +19,31 @@
     </header>
 
     <main>
-        <div class="wpm-container"><div id="wpm-results"></div></div>
-        <div class="quote-container"><p id='quote'></p></div>
-        <textarea id='user-input' placeholder="To begin, start typing..."></textarea>
-        <div class="btn-container"><button id='start-game'>Start</button></div>
+        <section class="difficulty-container">
+            <h2>Difficulty</h2>
+            <ul>
+                <li>5th Grader (~25 WPM)</li>
+                <li>Students 13 - 27 yrs. old (~35 WPM)</li>
+                <li>Programmers 22 - 53 yrs. old (~55 WPM)</li>
+                <li>Creator < 30 yrs. old (~115 WPM)</li>
+            </ul>
+        </section>
+        <section class="main-container">
+            <div class="wpm-container"><div id="wpm-results"></div></div>
+            <div class="quote-container"><p id='quote'></p></div>
+            <textarea id='user-input' placeholder="To begin, start typing..."></textarea>
+            <div class="btn-container"><button id='start-game'>Start</button></div>
+        </section>
+        <section class="instructions-container">
+            <h2>Instructions</h2>
+            <ul>
+                <li>Choose your opponent on the left</li>
+                <li>Hit the start button when you're ready</li>
+                <li>The race begins when you start typing</li>
+                <li>Hit start to race again</li>
+                <li>Good luck!</li>
+            </ul>
+        </section>
     </main>
 
     <footer>

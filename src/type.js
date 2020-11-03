@@ -16,6 +16,8 @@ function UserTyping() {
         startTime = new Date();
     }
 
+    let totalWrong = quote.length;
+
     quote.forEach( (char, idx) => {
         if (userInputs[idx] === undefined) {
             char.classList.remove('right');
@@ -23,15 +25,17 @@ function UserTyping() {
         } else if (char.innerHTML === userInputs[idx]) {
             char.classList.remove('wrong');
             char.classList.add('right');
+            totalWrong -= 1
         } else {
             char.classList.remove('right');
             char.classList.add('wrong');
+            totalWrong += 1
         };
     });
 
     let lastChar = quote.length - 1;
 
-    if (quote[lastChar].innerHTML === userInputs[lastChar]) {
+    if (quote[lastChar].innerHTML === userInputs[lastChar] && totalWrong === 0) {
         endTime = new Date();
         const minutes = (endTime - startTime) / 1000 / 60;
         const numWords = quote.length / 5;
