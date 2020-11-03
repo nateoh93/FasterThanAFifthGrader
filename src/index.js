@@ -21,6 +21,7 @@ const startGame = document.getElementById('start-game')
 startGame.addEventListener('click', () => {
     // countdown();
     LoadGame();
+    userTyping.focus();
 });
 
 userTyping.addEventListener('input', () => {

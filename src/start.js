@@ -1,8 +1,17 @@
 const randomWords = require('random-words');
 
 function LoadGame() {
-    const quote = document.getElementsByClassName('quote')[0];
-    quote.innerHTML = randomWords({ min: 30, max: 70, join: ' '})
-}
+    let quote = document.getElementById('quote');
+    let newQuote = randomWords({ min: 30, max: 70, join: ' '});
+
+    quote.innerHTML = '';
+    
+    newQuote.split('').forEach( char => {
+        const span = document.createElement('span');
+        span.innerHTML = char;
+        quote.appendChild(span);
+    });
+
+};
 
 export default LoadGame;
