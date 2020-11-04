@@ -9,9 +9,6 @@ import compMove from './computer';
 
 let startTime = null;
 let endTime = null;
-let char2 = document.getElementById('char2');
-char2.style.left = '0px';
-// let p = 0
 
 function UserTyping() {
     let userInputs = userTyping.value.split('');
@@ -32,22 +29,14 @@ function UserTyping() {
         } else if (char.innerHTML === userInputs[idx]) {
             char.classList.remove('wrong');
             char.classList.add('right');
-            // p += pixelMovement
-            // Move(pixelMovement);
             totalWrong -= 1
-            // Move(totalWrong);
         } else {
-            // p -= pixelMovement
-            // console.log(-pixelMovement)
-            // Move(-pixelMovement);
-            // Move(0);
             char.classList.remove('right');
             char.classList.add('wrong');
             totalWrong += 1
         };
 
-        let p = (1 - (totalWrong/quote.length)) * 500
-        Move(p);
+        Move((1 - (totalWrong/quote.length)) * 500);
     });
 
     if (quote[lastChar].innerHTML === userInputs[lastChar] && totalWrong === 0) {

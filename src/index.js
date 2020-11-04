@@ -7,7 +7,6 @@ const startGame = document.getElementById('start-game')
 const restartGame = document.getElementById('restart-game')
 
 startGame.addEventListener('click', LoadGame);
-// userTyping.addEventListener('input', UserTyping);
 
 restartGame.addEventListener('click', () => {
   window.location.reload();
