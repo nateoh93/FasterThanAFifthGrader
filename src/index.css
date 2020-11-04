@@ -83,6 +83,8 @@ ul {
     padding: 5px 15px 5px 15px;
     width: 500px;
     height: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -149,4 +151,10 @@ img {
 
 .hidden {
     display: none;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid darkgray;
+    border-style: dashed;
 }

@@ -9,21 +9,16 @@ let startTime = null;
 let endTime = null;
 
 function UserTyping() {
-    // startGame.removeEventListener('click', LoadGame);
-    Move()
-
     let userInputs = userTyping.value.split('');
     let quote = document.querySelectorAll('span');
-
-    if (!startTime) {
-        startTime = new Date();
-    }
-
-    console.log(startTime)
-    
-    
     let totalWrong = quote.length;
-
+    let lastChar = quote.length - 1;
+    let pixelMovement = (totalWrong / (500 - 30));
+    
+    Move()
+    
+    if (!startTime) { startTime = new Date(); }
+    
     quote.forEach( (char, idx) => {
         if (userInputs[idx] === undefined) {
             char.classList.remove('right');
@@ -39,8 +34,6 @@ function UserTyping() {
         };
     });
 
-    let lastChar = quote.length - 1;
-
     if (quote[lastChar].innerHTML === userInputs[lastChar] && totalWrong === 0) {
         endTime = new Date();
         const minutes = (endTime - startTime) / 1000 / 60;
@@ -51,8 +44,7 @@ function UserTyping() {
         // startGame.classList.remove('hidden');
         userTyping.removeEventListener('input', UserTyping);
         return;
-    }
-    
+    };
 };
 
 export default UserTyping;
