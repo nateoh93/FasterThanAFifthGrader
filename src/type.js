@@ -2,6 +2,7 @@ const userTyping = document.getElementById('user-input');
 const wpmResults = document.getElementById('wpm-results');
 const startGame = document.getElementById('start-game');
 import LoadGame from './start';
+import Move from './animate'
 
 
 let startTime = null;
@@ -9,6 +10,7 @@ let endTime = null;
 
 function UserTyping() {
     // startGame.removeEventListener('click', LoadGame);
+    Move()
 
     let userInputs = userTyping.value.split('');
     let quote = document.querySelectorAll('span');

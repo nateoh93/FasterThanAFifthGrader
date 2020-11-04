@@ -78,9 +78,15 @@ ul {
     margin: 0px 10px 0 10px;
 }
 
-canvas {
+.race-container {
     border: 1px solid blue;
     padding: 5px 15px 5px 15px;
+    width: 500px;
+    height: 100px;
+}
+
+img {
+    width: 30px;
 }
 
 .difficulty-container, .instructions-container {
