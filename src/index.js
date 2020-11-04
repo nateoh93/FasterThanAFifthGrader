@@ -1,6 +1,6 @@
 import LoadGame from './start';
 import UserTyping from './type';
-import Move from './animate'
+import Animate from './animate'
 
 const userTyping = document.getElementById('user-input')
 const startGame = document.getElementById('start-game')

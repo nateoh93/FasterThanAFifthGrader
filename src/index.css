@@ -79,12 +79,13 @@ ul {
 }
 
 .race-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 5px 15px 5px 15px;
     width: 500px;
     height: 100px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 img {
@@ -157,4 +158,25 @@ img {
     width: 100%;
     border-bottom: 1px solid darkgray;
     border-style: dashed;
+    position: absolute;
+    left: 0px;
+}
+
+.line:first-of-type {
+    top: 49px;
+}
+
+.line:last-of-type {
+    top: 102px;
+}
+
+#char1 {
+    position: absolute;
+    top: 0;
+    /* left: 0px; */
+}
+
+#char2 {
+    position: absolute;
+    top: 55px;
 }

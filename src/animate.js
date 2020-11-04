@@ -3,7 +3,7 @@ let pos = 'leftFoot';
 // import img from '../public/images/r_000.png'
 // import img2 from '../public/images/r_010.png'
 
-function Move() {
+function Animate() {
     const character = document.getElementById('char1');
     const character2 = document.getElementById('char2');
     if (pos === 'leftFoot') {
@@ -21,6 +21,4 @@ function Move() {
     }
 }
 
-export default Move;
-
-let timer = setInterval(Move(), 1000)
+export default Animate;

@@ -2,7 +2,8 @@ const userTyping = document.getElementById('user-input');
 const wpmResults = document.getElementById('wpm-results');
 const startGame = document.getElementById('start-game');
 import LoadGame from './start';
-import Move from './animate'
+import Animate from './animate';
+import Move from './move';
 
 
 let startTime = null;
@@ -15,7 +16,7 @@ function UserTyping() {
     let lastChar = quote.length - 1;
     let pixelMovement = (totalWrong / (500 - 30));
     
-    Move()
+    Animate()
     
     if (!startTime) { startTime = new Date(); }
     
@@ -26,6 +27,7 @@ function UserTyping() {
         } else if (char.innerHTML === userInputs[idx]) {
             char.classList.remove('wrong');
             char.classList.add('right');
+            Move(pixelMovement);
             totalWrong -= 1
         } else {
             char.classList.remove('right');
