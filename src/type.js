@@ -1,21 +1,16 @@
-const userTyping = document.getElementById('user-input');
-const wpmResults = document.getElementById('wpm-results');
-const startGame = document.getElementById('start-game');
-import LoadGame from './start';
 import Animate from './animate';
 import Move from './move';
-import compMove from './computer';
 
-
+const userTyping = document.getElementById('user-input');
+const wpmResults = document.getElementById('wpm-results');
 let startTime = null;
 let endTime = null;
 
 function UserTyping() {
-    let userInputs = userTyping.value.split('');
-    let quote = document.querySelectorAll('span');
-    let totalWrong = quote.length;
-    let lastChar = quote.length - 1;
-    // let pixelMovement = (totalWrong / (500 * 5));
+    const userInputs = userTyping.value.split('');
+    const quote = document.querySelectorAll('span');
+    const totalWrong = quote.length;
+    const lastChar = quote.length - 1;
 
     console.log(totalWrong)
     

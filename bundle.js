@@ -464,15 +464,14 @@ document.getElementById('creator').onclick = () => {
 }
 
 function compMove() {
-    let char1 = document.getElementById('char1');
+    const char1 = document.getElementById('char1');
+    const auto = setInterval(frames, 125);
+    const quote = document.querySelectorAll('span');
+    const length = quote.length;
+    const speed = (difficulty * 5) / 480;
+    const steps = length / speed;
     let pos = 0;
-    let auto = setInterval(frames, 125);
     let position = 'leftFoot';
-
-    let quote = document.querySelectorAll('span');
-    let length = quote.length;
-    let speed = (difficulty * 5) / 480;
-    let steps = length / speed;
 
     function frames() {
         if (pos === 500 || parseInt(char1.style.left) >= 500) {
@@ -512,13 +511,11 @@ function compMove() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _start__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./start */ "./src/start.js");
-/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./type */ "./src/type.js");
-/* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animate */ "./src/animate.js");
 
+// import UserTyping from './type';
+// import Animate from './animate'
 
-
-
-const userTyping = document.getElementById('user-input')
+// const userTyping = document.getElementById('user-input')
 const startGame = document.getElementById('start-game')
 const restartGame = document.getElementById('restart-game')
 
@@ -527,17 +524,6 @@ startGame.addEventListener('click', _start__WEBPACK_IMPORTED_MODULE_0__.default)
 restartGame.addEventListener('click', () => {
   window.location.reload();
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const canvasEl = document.getElementsByTagName("canvas")[0];
-//   canvasEl.width = 500;
-//   canvasEl.height = 100;
-
-//   const ctx = canvasEl.getContext("2d");
-// //   const game = new Game();
-// //   new GameView(game, ctx).start();
-// });
-
 
 /***/ }),
 
@@ -557,7 +543,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 function Move(pixels) {
-    let char2 = document.getElementById('char2');
+    const char2 = document.getElementById('char2');
 
     if (parseFloat(char2.style.left) <= 0 && pixels <= 0) {
         char2.style.left = 0 + 'px';
@@ -612,10 +598,9 @@ function LoadGame() {
     }, 1000);
 
     startGame.classList.add('hidden')
-    let quote = document.getElementById('quote');
-    let newQuote = randomWords({ exactly: 30, join: ' '});
-
-    let wpmResults = document.getElementById('wpm-results');
+    const quote = document.getElementById('quote');
+    const wpmResults = document.getElementById('wpm-results');
+    const newQuote = randomWords({ exactly: 30, join: ' '});
 
     quote.innerHTML = '';
     wpmResults.innerHTML = '';
@@ -652,32 +637,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var _start__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./start */ "./src/start.js");
-/* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animate */ "./src/animate.js");
-/* harmony import */ var _move__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./move */ "./src/move.js");
-/* harmony import */ var _computer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./computer */ "./src/computer.js");
+/* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animate */ "./src/animate.js");
+/* harmony import */ var _move__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./move */ "./src/move.js");
+
+
+
 const userTyping = document.getElementById('user-input');
 const wpmResults = document.getElementById('wpm-results');
-const startGame = document.getElementById('start-game');
-
-
-
-
-
-
 let startTime = null;
 let endTime = null;
 
 function UserTyping() {
-    let userInputs = userTyping.value.split('');
-    let quote = document.querySelectorAll('span');
-    let totalWrong = quote.length;
-    let lastChar = quote.length - 1;
-    // let pixelMovement = (totalWrong / (500 * 5));
+    const userInputs = userTyping.value.split('');
+    const quote = document.querySelectorAll('span');
+    const totalWrong = quote.length;
+    const lastChar = quote.length - 1;
 
     console.log(totalWrong)
     
-    ;(0,_animate__WEBPACK_IMPORTED_MODULE_1__.default)();
+    ;(0,_animate__WEBPACK_IMPORTED_MODULE_0__.default)();
     // compMove();
     
     if (!startTime) { startTime = new Date(); }
@@ -696,7 +674,7 @@ function UserTyping() {
             totalWrong += 1
         };
 
-        (0,_move__WEBPACK_IMPORTED_MODULE_2__.default)((1 - (totalWrong/quote.length)) * 500);
+        (0,_move__WEBPACK_IMPORTED_MODULE_1__.default)((1 - (totalWrong/quote.length)) * 500);
     });
 
     if (quote[lastChar].innerHTML === userInputs[lastChar] && totalWrong === 0) {

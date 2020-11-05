@@ -59,15 +59,14 @@ document.getElementById('creator').onclick = () => {
 }
 
 function compMove() {
-    let char1 = document.getElementById('char1');
+    const char1 = document.getElementById('char1');
+    const auto = setInterval(frames, 125);
+    const quote = document.querySelectorAll('span');
+    const length = quote.length;
+    const speed = (difficulty * 5) / 480;
+    const steps = length / speed;
     let pos = 0;
-    let auto = setInterval(frames, 125);
     let position = 'leftFoot';
-
-    let quote = document.querySelectorAll('span');
-    let length = quote.length;
-    let speed = (difficulty * 5) / 480;
-    let steps = length / speed;
 
     function frames() {
         if (pos === 500 || parseInt(char1.style.left) >= 500) {

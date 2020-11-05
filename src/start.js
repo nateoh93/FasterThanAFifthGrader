@@ -22,10 +22,9 @@ function LoadGame() {
     }, 1000);
 
     startGame.classList.add('hidden')
-    let quote = document.getElementById('quote');
-    let newQuote = randomWords({ exactly: 30, join: ' '});
-
-    let wpmResults = document.getElementById('wpm-results');
+    const quote = document.getElementById('quote');
+    const wpmResults = document.getElementById('wpm-results');
+    const newQuote = randomWords({ exactly: 30, join: ' '});
 
     quote.innerHTML = '';
     wpmResults.innerHTML = '';
