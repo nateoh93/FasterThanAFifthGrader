@@ -15,10 +15,12 @@ function UserTyping() {
     let quote = document.querySelectorAll('span');
     let totalWrong = quote.length;
     let lastChar = quote.length - 1;
-    let pixelMovement = (totalWrong / (500 * 5));
+    // let pixelMovement = (totalWrong / (500 * 5));
+
+    console.log(totalWrong)
     
     Animate();
-    // compMove();
+    compMove();
     
     if (!startTime) { startTime = new Date(); }
     
@@ -44,8 +46,10 @@ function UserTyping() {
         const minutes = (endTime - startTime) / 1000 / 60;
         const numWords = quote.length / 5;
         const wpm = Math.floor(numWords / minutes);
+
+        console.log(wpm)
+
         wpmResults.innerHTML = wpm + ' words per minute';
-        console.log(endTime)
         // startGame.classList.remove('hidden');
         userTyping.removeEventListener('input', UserTyping);
         return;
