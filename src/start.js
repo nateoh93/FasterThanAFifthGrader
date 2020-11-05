@@ -6,9 +6,19 @@ const startGame = document.getElementById('start-game');
 const userTyping = document.getElementById('user-input');
 
 function LoadGame() {
-    setTimeout(compMove, 5000)
-    console.log(setTimeout(compMove, 5000))
+    let timeleft = 5;
 
+    let timer = setInterval( function() {
+        if (timeleft <= 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").style.display = "none";
+            compMove();
+        } else {
+            document.getElementById("countdown").innerHTML = 'Begins in ' + timeleft + "...";
+        };
+
+        timeleft -= 1;
+    }, 1000);
 
     startGame.classList.add('hidden')
     let quote = document.getElementById('quote');
