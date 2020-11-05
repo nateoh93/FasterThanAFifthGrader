@@ -70,6 +70,7 @@ function compMove() {
 
     function frames() {
         if (pos === 500 || parseInt(char1.style.left) >= 500) {
+            
             clearInterval(auto);
         } else {
             if (position === 'leftFoot') {

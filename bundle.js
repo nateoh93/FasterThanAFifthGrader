@@ -475,6 +475,7 @@ function compMove() {
 
     function frames() {
         if (pos === 500 || parseInt(char1.style.left) >= 500) {
+            
             clearInterval(auto);
         } else {
             if (position === 'leftFoot') {
@@ -650,7 +651,7 @@ let endTime = null;
 function UserTyping() {
     const userInputs = userTyping.value.split('');
     const quote = document.querySelectorAll('span');
-    const totalWrong = quote.length;
+    let totalWrong = quote.length;
     const lastChar = quote.length - 1;
 
     console.log(totalWrong)
@@ -683,11 +684,22 @@ function UserTyping() {
         const numWords = quote.length / 5;
         const wpm = Math.floor(numWords / minutes);
 
-        console.log(wpm)
-
         wpmResults.innerHTML = wpm + ' words per minute';
-        // startGame.classList.remove('hidden');
+        
+        const userTyping = document.getElementById('user-input');
         userTyping.removeEventListener('input', UserTyping);
+        const computer = document.getElementById('computer');
+        if ((computer.innerHTML === '5th Grader' && wpm > 25) ||
+            (computer.innerHTML === 'Student' && wpm > 35) ||
+            (computer.innerHTML === 'Programmer' && wpm > 55) ||
+            (computer.innerHTML === 'Elite' && wpm > 75) ||
+            (computer.innerHTML === 'Creator' && wpm > 115)) {
+                document.getElementById('winner').innerHTML = 'You won!'
+                document.getElementById('winner-comp').innerHTML = 'Computer lost'
+        } else {
+            document.getElementById('winner').innerHTML = 'You lost'
+            document.getElementById('winner-comp').innerHTML = 'Computer won!'
+        }
         return;
     };
 };
