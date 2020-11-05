@@ -689,19 +689,6 @@ function UserTyping() {
         const userTyping = document.getElementById('user-input');
         userTyping.removeEventListener('input', UserTyping);
         
-        // const computer = document.getElementById('computer');
-        // if ((computer.innerHTML === '5th Grader' && wpm > 25) ||
-        //     (computer.innerHTML === 'Student' && wpm > 35) ||
-        //     (computer.innerHTML === 'Programmer' && wpm > 55) ||
-        //     (computer.innerHTML === 'Elite' && wpm > 75) ||
-        //     (computer.innerHTML === 'Creator' && wpm > 115)) {
-        //         document.getElementById('winner').innerHTML = 'You won!'
-        //         document.getElementById('winner-comp').innerHTML = 'Computer lost'
-        // } else {
-        //     document.getElementById('winner').innerHTML = 'You lost'
-        //     document.getElementById('winner-comp').innerHTML = 'Computer won!'
-        // }
-
         if (parseFloat(document.getElementById('char1').style.left) >= 500) {
             document.getElementById('winner').innerHTML = 'You lost'
             document.getElementById('winner-comp').innerHTML = 'Computer won!'
