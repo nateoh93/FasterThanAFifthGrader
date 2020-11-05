@@ -22,25 +22,25 @@
         <section class="difficulty-container">
             <h2>Difficulty</h2>
             <ul>
-                <li>5th Grader (~25 WPM)</li>
-                <li>Students 13 - 27 yrs. old (~35 WPM)</li>
-                <li>Programmers 22 - 53 yrs. old (~55 WPM)</li>
-                <li>Elite (~75 WPM)</li>
-                <li>Creator < 30 yrs. old (~115 WPM)</li>
+                <li id='5thgrader'>5th Grader (~25 WPM)</li>
+                <li id='student'>Student 13 - 27 yrs. old (~35 WPM)</li>
+                <li id='programmer'>Programmer 22 - 53 yrs. old (~55 WPM)</li>
+                <li id='elite'>Elite (~75 WPM)</li>
+                <li id='creator'>Creator < 30 yrs. old (~115 WPM)</li>
             </ul>
             <div class='start-containers'>
-                <div class="btn-container"><button id='start-game'>Begin</button></div>
+                <div class="btn-container"><button id='start-game'>Start</button></div>
                 <div class="btn-container"><button id='restart-game'>Restart</button></div>
             </div>
         </section>
         <section class="main-container">
             <div class="wpm-container"><div id="wpm-results"></div></div>
             <div class='race-container'>
-                <h3>Computer</h3>
-                <img src="./public/images/r_000.png" id='char1'>
+                <h3 id='computer'>5th Grader</h3>
+                <img src="./public/images/drun_000.png" id='char1'>
                 <div class="line"></div>
                 <h3>You</h3>
-                <img src="./public/images/run_000.png" id='char2'>
+                <img src="./public/images/erun_000.png" id='char2'>
                 <div class="line"></div>
             </div>
             <div class="quote-container"><p id='quote'></p></div>
@@ -51,7 +51,7 @@
             <h2>Instructions</h2>
             <ul>
                 <li>Choose your opponent on the left</li>
-                <li>The race begins when you start typing</li>
+                <li>Hit start and begin typing at the end of the countdown</li>
                 <li>Hit restart to race again</li>
                 <li>Good luck!</li>
             </ul>

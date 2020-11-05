@@ -71,7 +71,7 @@ textarea:focus {
 ul {
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 300px;
     justify-content: space-around;
     line-height: 1.25;
     font-size: 15px;
@@ -213,4 +213,21 @@ img {
     left: 200px;
     font-size: 30px;
     text-align: center;
+}
+
+.difficulty-container li:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+
+li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0 5px;
+}
+
+.active {
+    
 }
