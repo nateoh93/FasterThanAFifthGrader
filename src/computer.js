@@ -2,9 +2,10 @@ let difficulty = 25;
 let firstImg = 'public/images/drun_010.png';
 let secondImg = 'public/images/drun_020.png';
 let thirdImg = 'public/images/drun_000.png';
-let img;
 
 document.getElementById('5thgrader').onclick = () => {
+    document.querySelectorAll('.active').forEach( ele => ele.classList.remove('active'));
+    document.getElementById('5thgrader').classList.add('active');
     document.getElementById('char1').src = 'public/images/drun_000.png';
     document.getElementById('computer').innerHTML = '5th Grader';
     difficulty = 25;
@@ -14,6 +15,8 @@ document.getElementById('5thgrader').onclick = () => {
 }
 
 document.getElementById('student').onclick = () => {
+    document.querySelectorAll('.active').forEach( ele => ele.classList.remove('active'));
+    document.getElementById('student').classList.add('active');
     document.getElementById('char1').src = 'public/images/brun_000.png';
     document.getElementById('computer').innerHTML = 'Student';
     difficulty = 35;
@@ -23,6 +26,8 @@ document.getElementById('student').onclick = () => {
 }
 
 document.getElementById('programmer').onclick = () => {
+    document.querySelectorAll('.active').forEach( ele => ele.classList.remove('active'));
+    document.getElementById('programmer').classList.add('active');
     document.getElementById('char1').src = 'public/images/run_000.png';
     document.getElementById('computer').innerHTML = 'Programmer';
     difficulty = 55;
@@ -32,6 +37,8 @@ document.getElementById('programmer').onclick = () => {
 }
 
 document.getElementById('elite').onclick = () => {
+    document.querySelectorAll('.active').forEach( ele => ele.classList.remove('active'));
+    document.getElementById('elite').classList.add('active');
     document.getElementById('char1').src = 'public/images/crun_000.png';
     document.getElementById('computer').innerHTML = 'Elite';
     difficulty = 75;
@@ -41,6 +48,8 @@ document.getElementById('elite').onclick = () => {
 }
 
 document.getElementById('creator').onclick = () => {
+    document.querySelectorAll('.active').forEach( ele => ele.classList.remove('active'));
+    document.getElementById('creator').classList.add('active');
     document.getElementById('char1').src = 'public/images/arun_000.png';
     document.getElementById('computer').innerHTML = 'Creator';
     difficulty = 115;
