@@ -56,12 +56,12 @@ button {
 textarea {
     resize: none;
     width: 500px;
-    height: 100px;
+    height: 90px;
     border-radius: 1rem;
     padding: 5px 15px 5px 15px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    margin-top: 15px;
+    margin: 10px 0px;
 }
 
 textarea:focus {
@@ -120,7 +120,7 @@ img {
 .quote-container {
     width: 500px;
     height: 125px;
-    margin: 5px;
+    margin: 25px 5px 5px 5px;
     display: flex;
     align-items: center;
     background: aliceblue;
@@ -167,7 +167,7 @@ img {
 }
 
 .line:last-of-type {
-    top: 102px;
+    top: 116px;
 }
 
 #char1 {
@@ -178,6 +178,21 @@ img {
 
 #char2 {
     position: absolute;
-    top: 55px;
+    top: 68px;
     left: 0px;
 }
+
+.race-container h3:first-of-type {
+    left: 0px;
+    position: absolute;
+    top: -15px;
+    font-size: 12px;
+}
+
+.race-container h3:last-of-type {
+    left: 0px;
+    position: absolute;
+    top: 55px;
+    font-size: 12px;
+}
+

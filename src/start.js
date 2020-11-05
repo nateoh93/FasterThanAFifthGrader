@@ -1,3 +1,4 @@
+import compMove from './computer';
 import UserTyping from './type';
 
 const randomWords = require('random-words');
@@ -5,6 +6,10 @@ const startGame = document.getElementById('start-game');
 const userTyping = document.getElementById('user-input');
 
 function LoadGame() {
+    setTimeout(compMove, 5000)
+    console.log(setTimeout(compMove, 5000))
+
+
     startGame.classList.add('hidden')
     let quote = document.getElementById('quote');
     let newQuote = randomWords({ exactly: 30, join: ' '});

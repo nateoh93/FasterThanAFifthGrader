@@ -20,7 +20,7 @@ function UserTyping() {
     console.log(totalWrong)
     
     Animate();
-    compMove();
+    // compMove();
     
     if (!startTime) { startTime = new Date(); }
     
