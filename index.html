@@ -19,19 +19,14 @@
     </header>
 
     <main>
-        <section class="difficulty-container">
-            <h2>Difficulty</h2>
+        <section class="instructions-container">
+            <h2>Instructions</h2>
             <ul>
-                <li id='5thgrader' class='active'>5th Grader (~25 WPM)</li>
-                <li id='student'>Student 13 - 27 yrs. old (~35 WPM)</li>
-                <li id='programmer'>Programmer 22 - 53 yrs. old (~55 WPM)</li>
-                <li id='elite'>Elite (~75 WPM)</li>
-                <li id='creator'>Creator < 30 yrs. old (~115 WPM)</li>
+                <li>Choose your opponent on the right</li>
+                <li>Hit start and wait for the countdown to begin</li>
+                <li>Hit restart to race again</li>
+                <li>Good luck!</li>
             </ul>
-            <div class='start-containers'>
-                <div class="btn-container"><button id='start-game'>Start</button></div>
-                <div class="btn-container"><button id='restart-game'>Restart</button></div>
-            </div>
         </section>
         <section class="main-container">
             <div class="wpm-container"><div id="wpm-results"></div></div>
@@ -45,16 +40,21 @@
             </div>
             <div class="quote-container"><p id='quote'></p></div>
             <textarea id='user-input' placeholder="Start typing at the end of the countdown..."></textarea>
-            <div id='countdown'></div>
+            <div class='hidden' id='countdown'></div>
         </section>
-        <section class="instructions-container">
-            <h2>Instructions</h2>
+        <section class="difficulty-container">
+            <h2>Difficulty</h2>
             <ul>
-                <li>Choose your opponent on the left</li>
-                <li>Hit start and wait for the countdown to begin</li>
-                <li>Hit restart to race again</li>
-                <li>Good luck!</li>
+                <li id='5thgrader' class='active'>5th Grader (~25 WPM)</li>
+                <li id='student'>Student 13 - 27 yrs. old (~35 WPM)</li>
+                <li id='programmer'>Programmer 22 - 53 yrs. old (~55 WPM)</li>
+                <li id='elite'>Elite (~75 WPM)</li>
+                <li id='creator'>Creator < 30 yrs. old (~115 WPM)</li>
             </ul>
+            <div class='start-containers'>
+                <div class="btn-container"><button id='start-game'>Start</button></div>
+                <div class="btn-container"><button id='restart-game'>Restart</button></div>
+            </div>
         </section>
     </main>
 

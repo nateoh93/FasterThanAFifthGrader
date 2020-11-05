@@ -6,7 +6,7 @@ const startGame = document.getElementById('start-game');
 const userTyping = document.getElementById('user-input');
 
 function LoadGame() {
-    let timeleft = 5;
+    let timeleft = 3;
 
     let timer = setInterval( function() {
         if (timeleft <= 0) {
@@ -14,6 +14,7 @@ function LoadGame() {
             document.getElementById("countdown").style.display = "none";
             compMove();
         } else {
+            document.getElementById("countdown").style.display = "flex";
             document.getElementById("countdown").innerHTML = 'Begins in ' + timeleft + "...";
         };
 
