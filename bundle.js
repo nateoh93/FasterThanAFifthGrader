@@ -522,6 +522,10 @@ const restartGame = document.getElementById('restart-game')
 
 startGame.addEventListener('click', _start__WEBPACK_IMPORTED_MODULE_0__.default);
 
+// window.onload = function () {
+//   document.getElementById('theme-song').play();
+// }
+
 restartGame.addEventListener('click', () => {
   window.location.reload();
 });
