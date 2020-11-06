@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Are You Faster Than A Fifth Grader?</title>
     <script src="bundle.js" defer></script>
+    <script src="https://kit.fontawesome.com/eea0d7a98f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/reset.css">
     <link rel="stylesheet" href="./src/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Montserrat&display=swap" rel="stylesheet">
@@ -38,10 +39,10 @@
                 <li>Good luck!</li>
                 <div></div>
             </ul>
-            <audio  loop id='theme-song' src="./public/theme-song.mp3" autoplay>
+            <h2 class='music-control'>Music Control</h2>
+            <audio autoplay loop id='theme-song' src="./public/theme-song.mp3" onloadstart="this.volume=0.1">
                 Your browser does not support the audio element.</audio>
-            <!-- <button onclick="document.getElementById('theme-song').play()">Play</button> -->
-            <div class="btn-container"><button onclick="document.getElementById('theme-song').pause()">Pause</button></div>
+            <div id='play'><i id='icon' class="fas fa-play-circle"></i></div>
         </section>
         <section class="main-container">
             <div class="wpm-container"><div id="wpm-results"></div></div>

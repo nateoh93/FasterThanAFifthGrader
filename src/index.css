@@ -279,3 +279,17 @@ button:hover {
     width: 50px;
     padding: 0 10px;
 }
+
+#play {
+    font-size: 30px;
+    width: fit-content;
+    margin: 10px;
+}
+
+#play:hover {
+    cursor: pointer;
+}
+
+.music-control {
+    margin-top: 10px;
+}
