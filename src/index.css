@@ -12,6 +12,7 @@ header, footer {
     margin: 20px;
     font-size: 15px;
     background: white;
+    text-align: center;
 }
 
 header {
@@ -65,14 +66,14 @@ textarea {
 }
 
 textarea:focus {
-    border: 2px solid black;
+    border: 2px solid #1877f2;
 }
 
 ul {
     display: flex;
     flex-direction: column;
-    height: 300px;
-    justify-content: space-around;
+    height: 315px;
+    justify-content: space-evenly;
     line-height: 1.25;
     font-size: 15px;
     margin: 0px 10px 0 10px;
@@ -133,13 +134,14 @@ img {
 }
 
 .btn-container {
-    width: 100px;
+    width: 110px;
     height: 25px;
     margin: 5px;
 }
 
 .right {
     color: darkgray;
+    text-decoration: line-through;
 }
 
 .wrong {
@@ -216,7 +218,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #countdown {
@@ -235,12 +237,12 @@ img {
 }
 
 .difficulty-container li:hover {
-    background: lightgray;
+    background: #f0f2f5;
     cursor: pointer;
 }
 
 li {
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     border-radius: 0.5rem;
@@ -248,5 +250,21 @@ li {
 }
 
 .active {
-    background: lightgray
+    background: #f0f2f5;
+}
+
+ul div {
+    border-bottom: 1px solid lightgray;
+}
+
+button {
+    background: #1877f2;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    height: 25px;
+}
+
+button:hover {
+    background: #1876f2ee;
 }
