@@ -45,7 +45,7 @@ h2 {
 main {
     width: 1000px;
     display: flex;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 button {
@@ -72,7 +72,7 @@ textarea:focus {
 ul {
     display: flex;
     flex-direction: column;
-    height: 315px;
+    height: 330px;
     justify-content: space-evenly;
     line-height: 1.25;
     font-size: 15px;
@@ -241,12 +241,17 @@ img {
     cursor: pointer;
 }
 
+.difficulty-container li {
+    justify-content: space-between;
+}
+
 li {
-    height: 50px;
+    height: 55px;
     display: flex;
     align-items: center;
     border-radius: 0.5rem;
     padding: 0 5px;
+    position: relative;
 }
 
 .active {
