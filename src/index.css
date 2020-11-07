@@ -16,7 +16,7 @@ header, footer {
 }
 
 header {
-    width: 1000px;
+    width: 1120px;
 }
 
 footer {
@@ -43,7 +43,7 @@ h2 {
 }
 
 main {
-    width: 1000px;
+    width: 1120px;
     display: flex;
     /* margin-top: 15px; */
 }
@@ -94,7 +94,7 @@ img {
 }
 
 .difficulty-container, .instructions-container {
-    width: 200px;
+    width: 260px;
     border: 1px solid gray;
     border-radius: 1rem; 
 }
