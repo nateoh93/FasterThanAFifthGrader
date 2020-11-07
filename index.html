@@ -41,8 +41,12 @@
             </ul>
             <h2 class='music-control'>Music Control</h2>
             <audio autoplay loop id='theme-song' src="./public/theme-song.mp3" onloadstart="this.volume=0.1">
-                Your browser does not support the audio element.</audio>
-            <div id='play'><i id='icon' class="fas fa-play-circle"></i></div>
+                Your browser does not support the audio element.
+            </audio>
+            <div class='audio-controls'>
+                <div id='play'><i id='icon' class="fas fa-play-circle"></i></div>
+                <div id='volume'><i id='volume-icon' class="fas fa-volume-up"></i></div>
+            </div>
         </section>
         <section class="main-container">
             <div class="wpm-container"><div id="wpm-results"></div></div>

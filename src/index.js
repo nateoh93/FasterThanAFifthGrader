@@ -1,8 +1,4 @@
 import LoadGame from './start';
-// import UserTyping from './type';
-// import Animate from './animate'
-
-// const userTyping = document.getElementById('user-input')
 const startGame = document.getElementById('start-game')
 const restartGame = document.getElementById('restart-game')
 
@@ -25,5 +21,20 @@ playBtn.addEventListener('click', () => {
     audio.pause();
     icon.classList.remove("fa-pause-circle");
     icon.classList.add("fa-play-circle");
+  }
+})
+
+const mute = document.getElementById('volume');
+const volumeIcon = document.getElementById('volume-icon');
+
+mute.addEventListener('click', () => {
+  if (audio.volume !== 0.0) {
+    audio.volume = 0.0;
+    volumeIcon.classList.remove("fa-volume-up");
+    volumeIcon.classList.add("fa-volume-mute");
+  } else {
+    audio.volume = 0.1;
+    volumeIcon.classList.remove("fa-volume-mute");
+    volumeIcon.classList.add("fa-volume-up");
   }
 })

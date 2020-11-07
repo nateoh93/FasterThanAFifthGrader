@@ -280,16 +280,24 @@ button:hover {
     padding: 0 10px;
 }
 
-#play {
-    font-size: 30px;
-    width: fit-content;
-    margin: 10px;
-}
-
-#play:hover {
+#play:hover, .volume:hover {
+    color: #1876f2ee;
     cursor: pointer;
 }
 
 .music-control {
     margin-top: 10px;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10px;
+}
+
+.audio-controls div {
+    font-size: 30px;
+    width: fit-content;
+    margin: 10px;
+    color: #1877f2;   
 }
