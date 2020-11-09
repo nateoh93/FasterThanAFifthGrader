@@ -12,8 +12,6 @@ function UserTyping() {
     let totalWrong = quote.length;
     const lastChar = quote.length - 1;
 
-    console.log(totalWrong)
-    
     Animate();
     // compMove();
     

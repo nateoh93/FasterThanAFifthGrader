@@ -7,6 +7,7 @@
   \********************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
+/*! CommonJS bailout: module.exports is used directly at 338:0-14 */
 /***/ ((module) => {
 
 var wordList = [
@@ -681,9 +682,7 @@ function UserTyping() {
     let totalWrong = quote.length;
     const lastChar = quote.length - 1;
 
-    console.log(totalWrong)
-    
-    ;(0,_animate__WEBPACK_IMPORTED_MODULE_0__.default)();
+    (0,_animate__WEBPACK_IMPORTED_MODULE_0__.default)();
     // compMove();
     
     if (!startTime) { startTime = new Date(); }
