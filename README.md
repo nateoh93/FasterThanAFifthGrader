@@ -19,6 +19,7 @@ Users can choose the computer's difficulty level and can race against the comput
 ![comp](https://user-images.githubusercontent.com/60491357/98721277-9554a480-2345-11eb-9523-1f4dda814cd4.gif)
 ### Words Per Minute
 Users can see their words per minute after the race.
+
 ![wpm](https://user-images.githubusercontent.com/60491357/98722987-9b975080-2346-11eb-8969-6e2df3c108bd.gif)
 ## Future Direction
 + Display words per minute real-time
